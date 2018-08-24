@@ -9,27 +9,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Web サイトで特定の表示方法を指定しているため互換表示させないようにしている-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
     <!--検索エンジンで表示されたときの表示-->
-    <title>team_RID official site</title>
+    <title>Your Portfolio Web</title>
+    <!--上のタイトルの下にある詳細の説明-->
+    <meta name="description" content="Your NameのポートフォリオWebサイトです。プロフィール掲載・制作してきた作品の紹介などをしています。">
+
+
+    <!--OGP、SNSでWebサイトがシェアされた時にそう見えるかを設定-->
+    <!--Webサイト名-->
+    <meta property="og:site_name" content="Your Name Portfolio Site">
+    <!--website,articleなど種類を設定-->
+    <meta property="og:type" content="website">
+    <!--ここからが実際にぱっと見でどう見えるか（4層）-->
+    <!--一番大きい画像が上に入る-->
+    <meta property="og:image" content="images/meta/ogimage.png">
+    <!--下の一番上のタイトル-->
+    <meta property="og:title" content="Your Name Portfolio Site">
+    <!--真ん中の説明-->
+    <meta property="og:description" content="Your Name のPortfolio Siteです。">
+    <!--一番下にあるurl-->
+    <meta property="og:url" content="#">
+
+
+    <!--番号が勝手に電話番号になるのをふせぐ-->
+    <meta name="format-touch-icon" content="telephone=no">
+
+    <!--Web Clipの際のアイコンの相対パスをhrefに。画像のファイル名はapple-touch-iconがmust-->
+    <link rel="apple-touch-icon" href="images/meta/apple-touch-icon.png">
+    <!--お気に入りやブックマークをした際の左の小さいアイコン設定-->
+    <link rel="shortcut icon" href="images/meta/favicon.ico">
 </head>
+
 <body>
         <!--でかい写真とコメントをはる-->
-        <img src="" alt="ロボットの写真">
+        <img src="images/header/RID_TOP.png" alt="RIDの様子">
         <p>team_RID</p>
         <header><!--写真の下にあるページの題名/ セクションもくじ-->
-
+            <h1>team_RID portfolio Web</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </header>
         
         <main><!--sectionのまとまり-->
-        <section><!--works,aout,などのセクション内容-->
+        <section id="about"><!--works,aout,などのセクション内容-->
+            <h2>About Us</h2>
 
+            <img src="images/header/RID_TOP.png" alt="RIDの様子">
+            <h3>What is team_RID</h3>
+            <p>人を楽しませたり、幸せにするためのロボットを学生だけで作り上げる
+                ロボットプロジェクトです。いろんな人にロボットを体験してほしいと、
+                こどもたちを対象としたイベントや高齢者対象としたイベント、また、
+                学校の文化祭、さらにはコンテストなどにも出展させて頂いてます。</p>            
+        </section>
+        <section id="works">
+            <h2>Works</h2><!--実績、つくったもの、イベント-->
+            <ul>
+                <li><!--いぬ-->
+                    <img src="" alt="">
+                    <h3>犬型ロボットについて</h3>
+                    <p>2018/8/24</p>
+                </li>
 
+                <li><!--ペンギンについて-->
+                    <img src="" alt="">
+                    <h3>ペンギンロボットについて</h3>
+                    <p>2018/8/24</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <!--乗法を送信するためのやつ-->
+            <form action="#" method="POST">
+                <dl>
+                    <dt>お名前</dt>
+                    <dd><input type="text" name="name" id="name"></dd>
+
+                    <dt>メールアドレス</dt>
+                    <dd><input type="email" name="email" id="email"></dd>
+
+                    <dt>お問い合わせ内容</dt>
+                    <dd><!--name属性を同じにしないと服す選択できてしまう-->
+                        <label for="request"><input type="radio" name="kind" id="request" value="ロボットのリクエスト">ロボットのリクエスト</label>
+                        <label for="event"><input type="radio" name="kind" id="event" value="イベントについて">イベントについて</label>
+                        <label for="other"><input type="radio" name="kind" id="other" value="その他">その他</label>
+                    </dd>
+
+                    <dt>お問い合わせ詳細</dt>
+                    <dd>
+                        <textarea name="detail" id="detail" cols="30" rows="10"></textarea>
+                    </dd>
+                </dl>
+                <input type="submit" value="送信">
+            </form>
         </section>
 
         </main>
 
         <footer>
-            <small></small>
+            <small>xxxxxx.example.com</small>
         </footer>
 
 </body>
